@@ -1,0 +1,176 @@
+body{
+    background-image: url('image/banner.jpg');
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Christmas Tree */
+.tree{
+    position: relative;
+    top: 100px;
+    width: 350px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.tree-photo{
+    width: 100%;
+    height: 100%;
+}
+
+/* Christmas Lights */
+.lights{
+    position: absolute;
+    top: 150px;
+    transform: translateX(-50%);
+}
+
+/* Bulbs */
+.bulb{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: twinkle 1.5s infinite;
+}
+
+.bulb:nth-child(1){
+    top: 5px;
+    left: 180px;
+    background-color: red;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+    animation-delay: 0s;
+}
+
+.bulb:nth-child(2){
+    top: 20px;
+    left: 130px;
+    background-color: yellow;
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.8);
+    animation-delay: 0.5s;
+}
+
+.bulb:nth-child(3){
+    top: 100px;
+    left: 200px;
+    background-color: blue;
+    box-shadow: 0 0 25px rgba(0, 0, 255, 0.8);
+    animation-delay: 0.8s;
+}
+
+.bulb:nth-child(4){
+    top: 100px;
+    left: 110px;
+    background-color: rgb(19, 240, 19);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.8);
+    animation-delay: 1s;
+}
+
+.bulb:nth-child(5){
+    top: 190px;
+    left: 150px;
+    background-color: orange;
+    box-shadow: 0 0 25px rgba(255, 165, 0, 0.8);
+    animation-delay: 1.2s;
+}
+
+.bulb:nth-child(6){
+    top: 200px;
+    left: 80px;
+    background-color: pink;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
+    animation-delay: 1.5s;
+}
+
+.bulb:nth-child(7){
+    top: 170px;
+    left: 200px;
+    background-color: rgb(174, 3, 180);
+    box-shadow: 0 0 25px rgba(136, 1, 177, 0.8);
+    animation-delay: 1.8s;
+}
+
+.bulb:nth-child(8){
+    top: 250px;
+    left: 300px;
+    background-color: rgb(0, 255, 179);
+    box-shadow: 0 0 25px rgba(0, 234, 175, 0.8);
+    animation-delay: 1.8s;
+}
+
+.bulb:nth-child(9){
+    top: 270px;
+    left: 180px;
+    background-color: cyan;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    animation-delay: 1.9s;
+}
+
+.bulb:nth-child(10){
+    top: 250px;
+    left: 50px;
+    background-color: rgb(248, 6, 200);
+    box-shadow: 0 0 25px rgba(224, 2, 194, 0.8);
+    animation-delay: 2s;
+}
+
+/* Animation */
+@keyframes twinkle{
+    0%,100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50%{
+        opacity: .3;
+        transform: scale(1.2);
+    }
+}
+
+/* Control Button */
+button{
+    position: relative;
+    border: none;
+    background-color: yellow;
+    color: blue;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 100px;
+    box-shadow: 0 0 15px rgba(243 , 239, 242, 0.8);
+    left: 25%;
+}
+
+/* Snowflake container */
+.snow-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+.snowflake{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    animation: fall linear infinite;
+}
+/* snowfall animation */
+@keyframes fall{
+    to{
+        transform: translateY(100vh) translateX(20px);
+    }
+}
